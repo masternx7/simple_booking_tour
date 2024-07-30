@@ -1,0 +1,458 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Fluffy Travel</title>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js" integrity="sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i" crossorigin="anonymous"></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+	<link href="css/mystylecss.css" rel="stylesheet"/>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai&display=swap" rel="stylesheet">
+	<script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			
+			$("#PaySucessed").click(function(){
+				
+				
+				var displaysource = $("#Package option:selected").val();
+				var displatPackageSelected = $("#Package option:selected").text();
+				var f = $('#firstNameCo').val();
+				var l = $('#lastNameCo').val();
+				
+				var khun = 'คุณ ';
+
+				var fplusl = f + " " + l;
+				$('#pPaysucced').html("ขอบคุณที่ไว้ใจเราและใช้บริการจากทางเราครับ <br>");
+				$('#pPaysucced').append(khun + fplusl+ "<br>ได้เลือก " + displatPackageSelected);
+				$('#pPaysucced').append("<br>ราคา " + "฿ " + displaysource * ((100-10)/100));
+				
+			});
+			
+			$("#Package").change(function(){
+				var displaysource = $("#Package option:selected").val();
+				var displatPackageSelected = $("#Package option:selected").text();
+				$("#PricePackage").html(displaysource);
+				$("#SelectedPackage").html(displatPackageSelected);
+				$("#Total").html("฿ " + displaysource * ((100-10)/100));
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg bg-white sticky-top navbar-light p-3 shadow-sm">
+	  <div class="container-fluid">
+		<a class="navbar-brand" href="index.html"><i class="me-2"></i> <img src="images/logo.png" width="25%"></a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+		  <span class="navbar-toggler-icon"></span>
+		</button>
+		<div class=" collapse navbar-collapse" id="navbarNavDropdown">
+		  <div class="ms-auto d-none d-lg-block">
+		  </div>
+		  <ul class="navbar-nav ms-auto ">
+			<li class="nav-item">
+			  <a class="nav-link mx-2 text-uppercase " aria-current="page" href="index.html">หน้าแรก</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link mx-2 text-uppercase" href="tourabroad.html">ทัวร์ต่างประเทศ</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link mx-2 text-uppercase" href="tourthailand.html">ทัวร์ในประเทศ</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link mx-2 text-uppercase" href="article.html">บทความท่องเที่ยว</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link mx-2 text-uppercase" href="aboutus.html">เกี่ยวกับเรา</a>
+			</li>
+			<li class="nav-item">
+			  <a class="mx-3 btn btn-danger" data-bs-toggle="modal" data-bs-target="#loginModal">เข้าสู่ระบบ</a>
+			</li>
+		  </ul>
+		</div>
+	  </div>
+	</nav>
+	<div class="container-fluid px-0" style="width: 100%">
+		<div class="row">
+			<div class="col">
+				<div id="carouselExampleCaptions" class="carousel slide">
+				  <div class="carousel-indicators">
+					<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+					<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+					<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+				  </div>
+				  <div class="carousel-inner">
+					<div class="carousel-item active">
+					  <img src="images/sl1.png" class="d-block w-100" alt="...">
+					  <div class="carousel-caption d-none d-md-block">
+						<h5>ไปทัวร์ญี่ปุ่น</h5>
+						<p>ชมต้นซากุระสวยๆ งดงามได้เลย</p>
+					  </div>
+					</div>
+					<div class="carousel-item">
+					  <img src="images/sl2.png" class="d-block w-100" alt="...">
+					  <div class="carousel-caption d-none d-md-block">
+						<h5>5 ช้อปปิ้งลิสต์</h5>
+						<p>ของฝากจากเวียดนาม ที่ต้องซื้อกลับบ้าน</p>
+					  </div>
+					</div>
+					<div class="carousel-item">
+					  <img src="images/sl3.png" class="d-block w-100" alt="...">
+					  <div class="carousel-caption d-none d-md-block">
+						<h5>ทัวร์ฮ่องกง</h5>
+						<p>ไหว้พระเสริมความปัง ทริปนี้สายมูไม่ควรพลาด</p>
+					  </div>
+					</div>
+				  </div>
+				  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Previous</span>
+				  </button>
+				  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Next</span>
+				  </button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<br>
+	<div class="container py-5 px-5">
+	  <div class="py-5 text-center">
+		<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-cart-check-fill" viewBox="0 0 16 16">
+			<path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-1.646-7.646-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708z"/>
+		  </svg><br><br>
+		<h2>Checkout form</h2>
+		<p class="lead">กรุณากรอกรายละเอียดให้ถูกต้องและครบถ้วน</p>
+	  </div>
+
+	  <div class="row g-5">
+		<div class="col-md-5 col-lg-4 order-md-last">
+		  <h4 class="d-flex justify-content-between align-items-center mb-3">
+			<span class="text-primary">Your cart</span>
+		  </h4>
+		  <ul class="list-group mb-3">
+			<li class="list-group-item d-flex justify-content-between lh-sm">
+			  <div>
+				<h6 class="my-0">PACKET ท่องเที่ยว</h6>
+				<small id="SelectedPackage" class="text-body-secondary">คุณได้เลือก Packet นี้</small>
+			  </div>
+			  <p id="PricePackage" class="text-body-secondary">฿ 0</p>
+			</li>
+			<li class="list-group-item d-flex justify-content-between bg-body-tertiary">
+			  <div class="text-success">
+				<h6 class="my-0">คูปองส่วนลด</h6>
+			  </div>
+			  <span id="Discount" class="text-success">10%</span>
+			</li>
+			<li class="list-group-item d-flex justify-content-between">
+			  <span>รวมทั้งสิ้น (ฺBaht)</span>
+			  <strong id="Total" >฿ 0</strong>
+			</li>
+		  </ul>
+
+		  <form class="card p-2">
+			<div class="input-group">
+			  <input type="text" class="form-control" placeholder="IT465">
+			  <button type="submit" class="btn btn-secondary">Redeem</button>
+			</div>
+		  </form>
+		</div>
+		<div class="col-md-7 col-lg-8">
+		  <h4 class="mb-3">ที่อยู่ในการเรียกเก็บเงิน</h4>
+		  <form class="needs-validation" novalidate>
+			<div class="row g-3">
+			  <div class="mb-3">
+				<label for="exampleFormControlInput1" class="form-label">แพ็คเกจทัวร์</label>
+					<select id="Package" class="form-select" aria-label="Default select example">
+					  <option selected>เลือก Package ทัวร์ของคุณ</option>
+					  <option id="Pack1" value="14010">PACKAGE บาหลี-ทานาล็อต-คินตามณี 3 วัน 2 คืน (ต่างประเทศ)</option>
+					  <option id="Pack2" value="9990">PACKAGE CLUB MED FINOLHU แพ็คเกจคลับเมด ฟิโนลูห์ (ต่างประเทศ)</option>
+					  <option id="Pack3" value="5990">PACKAGE CLUB MED KANI แพ็คเกจคลับเมด คานิ (ต่างประเทศ)</option>
+					  <option id="Pack4" value="7990">PACKAGE ทัวร์บาหลี-ทานาล็อต-คินตามณี-เบซากีห์ (ต่างประเทศ)</option>
+					  <option value="กรุณาเลือก Package">-----------------------------</option>
+					  <option id="Pack5" value="1699">แพคเกจทัวร์ นครศรีธรรมราช โอบกอดธรรมชาติ 2 วัน 1 คืน เดินทางอิสระ (ในประเทศ)</option>
+					  <option id="Pack6" value="1999">แพคเกจทัวร์ น่าน ปัว บ่อเกลือ 2 วัน 1 คืน เดินทางอิสระ (ในประเทศ)</option>
+					  <option id="Pack7" value="4900">แพคเกจทัวร์ กระบี่ เกาะดำน้ำดูปะการังสุดฟิน 3 วัน 2 คืน (ในประเทศ)</option>
+					  <option id="Pack8" value="5900">แพคเกจทัวร์ กระบี่ SEA SAND SUN สีสันทะเลไทย 3 วัน 2 คืน (ในประเทศ)</option>
+					</select>
+				</div>
+			  <div class="col-sm-6">
+				<label for="firstName" class="form-label">ชื่อ</label>
+				<input type="text" class="form-control" id="firstNameCo" placeholder="ชื่อของคุณ" value="">
+			  </div>
+
+			  <div class="col-sm-6">
+				<label for="lastName" class="form-label">นามสกุล</label>
+				<input type="text" class="form-control" id="lastNameCo" placeholder="นามสกุล" value="">
+			  </div>
+
+			  <div class="col-12">
+				<label for="username" class="form-label">Username</label>
+				<div class="input-group has-validation">
+				  <span class="input-group-text">@</span>
+				  <input type="text" class="form-control" id="username" placeholder="Username">
+				</div>
+			  </div>
+
+			  <div class="col-12">
+				<label for="email" class="form-label">Email <span class="text-body-secondary">(Optional)</span></label>
+				<input type="email" class="form-control" id="email" placeholder="you@example.com">
+			  </div>
+
+			  <div class="col-12">
+				<label for="address" class="form-label">Address</label>
+				<input type="text" class="form-control" id="address" placeholder="1111 ไทย รังสิต" required>
+			  </div>
+
+			  <div class="col-12">
+				<label for="address2" class="form-label">Address 2 <span class="text-body-secondary">(Optional)</span></label>
+				<input type="text" class="form-control" id="address2" placeholder="ตึกหรืออาคาร">
+			  </div>
+
+			  <div class="col-md-5">
+				<label class="form-label">จังหวัด</label>
+				<select class="form-select" id="country">
+				  <option value="">เลือก...</option>
+				  <option>ปทุมธานี</option>
+				</select>
+			  </div>
+
+			  <div class="col-md-4">
+				<label class="form-label">อำเภอ</label>
+				<select class="form-select" id="state">
+				  <option value="">เลือก...</option>
+				  <option>รังสิต</option>
+				</select>
+			  </div>
+
+			  <div class="col-md-3">
+				<label for="zip" class="form-label">รหัสไปรษณีย์</label>
+				<input type="text" class="form-control" id="zip" placeholder="">
+			  </div>
+			</div>
+
+			<hr class="my-4">
+
+			<div class="form-check">
+			  <input type="checkbox" class="form-check-input" id="same-address">
+			  <label class="form-check-label" for="same-address">ที่อยู่จัดส่งเหมือนกับที่อยู่เรียกเก็บเงิน</label>
+			</div>
+
+			<div class="form-check">
+			  <input type="checkbox" class="form-check-input" id="save-info">
+			  <label class="form-check-label" for="save-info">บันทึกข้อมูลเพื่อใช้ในครั้งถัดไป</label>
+			</div>
+
+			<hr class="my-4">
+
+			<h4 class="mb-3">Payment</h4>
+
+			<div class="my-3">
+			  <div class="form-check">
+				<input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked required>
+				<label class="form-check-label" for="credit">Credit card</label>
+			  </div>
+			  <div class="form-check">
+				<input id="debit" name="paymentMethod" type="radio" class="form-check-input" required>
+				<label class="form-check-label" for="debit">Debit card</label>
+			  </div>
+			  <div class="form-check">
+				<input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required>
+				<label class="form-check-label" for="paypal">PayPal</label>
+			  </div>
+			</div>
+
+			<div class="row gy-3">
+			  <div class="col-md-6">
+				<label for="cc-name" class="form-label">ชื่อบนบัตร</label>
+				<input type="text" class="form-control" id="cc-name" placeholder="">
+				<small class="text-body-secondary">ชื่อเต็มที่แสดงในบัตร</small>
+				<div class="invalid-feedback">
+				  Name on card is required
+				</div>
+			  </div>
+
+			  <div class="col-md-6">
+				<label for="cc-number" class="form-label">เลขบัตร</label>
+				<input type="text" class="form-control" id="cc-number" placeholder="">
+			  </div>
+
+			  <div class="col-md-3">
+				<label for="cc-expiration" class="form-label">วันหมดอายุ</label>
+				<input type="text" class="form-control" id="cc-expiration" placeholder="">
+			  </div>
+
+			  <div class="col-md-3">
+				<label for="cc-cvv" class="form-label">CVV</label>
+				<input type="text" class="form-control" id="cc-cvv" placeholder="" required>
+			  </div>
+			</div>
+
+			<hr class="my-4">
+			<a id="PaySucessed" class="w-100 btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#PaySuccess">ดำเนินการชำระเงิน</a>
+		  </form>
+		</div>
+	  </div>
+	</div>
+	<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="opacity: 97%">
+		<div class="modal-dialog">
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <h1 class="modal-title fs-5" id="exampleModalLabel">ระบบสมาชิก | Member</h1>
+			  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+			  <div class="mb-3">
+				<label for="exampleFormControlInput1" class="form-label">Email address</label>
+				  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+			  </div>
+			  <div class="mb-3">
+				<label for="inputPassword5" class="form-label">Password</label>
+				  <input type="password" id="inputPassword5" class="form-control" aria-labelledby="passwordHelpBlock">
+				  <div id="passwordHelpBlock" class="form-text">
+					Your password must be 8-20 characters long.
+				  </div>
+			  </div>
+			</div>
+			<div class="modal-footer">
+			  <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginSuccess">เข้าสู่ระบบ</a>
+			  <a href="register.html" class="btn btn-primary">สมัครสมาชิก</a>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	  <div class="modal fade" id="loginSuccess" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true" style="opacity: 97%">
+		<div class="modal-dialog">
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <h1 class="modal-title fs-5" id="exampleModalLabel2">ระบบสมาชิก | Member</h1>
+			  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+			  <div class="alert alert-success" role="alert">
+				<h4 class="alert-heading">เข้าสู่ระบบเรียบร้อยแล้ว</h4>
+				<p>คุณสามารถดู Packet ท่องเที่ยวและดูรายละเอียดต่างๆได้ </p>
+				<p>ถ้าหากว่าคุณชอบ Packet ไหน สามารถกดจองได้ทันที</p>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	  <div class="modal fade" id="PaySuccess" tabindex="-1" aria-labelledby="PayModalLabel" aria-hidden="true" style="opacity: 97%">
+		<div class="modal-dialog">
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <h1 class="modal-title fs-5" id="PayModalLabel">การชำระเงิน</h1>
+			  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<div class="alert alert-success" role="alert" style="text-align: center">
+					<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+					  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+					</svg><br><br>
+				  <h4 class="alert-heading">จองทัวร์เรียบร้อยแล้ว</h4>
+					<p id="pPaysucced"></p>
+				</div>
+			  </div>
+		  </div>
+		</div>
+	  </div>
+	  <div class="modal fade" id="regisSuccess" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true" style="opacity: 97%; padding-top: 120px">
+		<div class="modal-dialog">
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <h1 class="modal-title fs-5" id="registerModalLabel">สมัครสมาชิก | Register</h1>
+			  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+			  <div class="alert alert-success" role="alert" style="text-align: center">
+				  <svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+					<path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+				  </svg><br><br>
+				<h4 class="alert-heading">สมัครสมาชิกเรียบร้อยแล้ว</h4>
+			  </div>
+			</div>
+			<div class="modal-footer">
+			  <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">เข้าสู่ระบบ</a>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	<footer class="text-center text-lg-start text-white" style="background-color: #929fba">
+		<div class="container p-4 pb-0">
+		  <section class="">
+			<div class="row">
+			  <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+				<h6 class="text-uppercase mb-4 font-weight-bold">
+				  fluffy travel
+				</h6>
+				<p>
+				  เปิดประสบการณ์ใหม่ๆ ของคุณกับที่ <br>Fluffy Travel ได้เลย สถานที่ท่องเที่ยวมีมากมาย
+				  ให้คุณได้สัมผัสประสบการณ์ <br>การท่องเที่ยวของคุณ
+				</p>
+			  </div>
+			  <hr class="w-100 clearfix d-md-none" />
+			  <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+				<h6 class="text-uppercase mb-4 font-weight-bold">แพ็คเกจ</h6>
+				<p>
+				  <a class="text-white" href="tourabroad.html">ทัวร์ต่างประเทศ</a>
+				</p>
+				<p>
+				  <a class="text-white" href="tourthailand.html">ทัวร์ในประเทศ</a>
+				</p>
+			  </div>
+			  <hr class="w-100 clearfix d-md-none" />
+			  <hr class="w-100 clearfix d-md-none" />
+
+			  <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+				<h6 class="text-uppercase mb-4 font-weight-bold">ติดต่อ</h6>
+				<p><i class="fas fa-home mr-3"></i> Pathum Thani, Rangsit</p>
+				<p><i class="fas fa-envelope mr-3"></i> nonthaphat@bumail.net</p>
+				<p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+				<p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+			  </div>
+			  <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+				<h6 class="text-uppercase mb-4 font-weight-bold">ติดตามเราได้ที่</h6>
+
+				<a
+				   class="btn btn-primary btn-floating m-1"
+				   style="background-color: #3b5998"
+				   href="#!"
+				   role="button"
+				   ><i class="fab fa-facebook"></i
+				  ></a>
+				<a
+				   class="btn btn-primary btn-floating m-1"
+				   style="background-color: #55acee"
+				   href="#!"
+				   role="button"
+				   ><i class="fab fa-twitter"></i
+				  ></a>
+				<a
+				   class="btn btn-primary btn-floating m-1"
+				   style="background-color: #ac2bac"
+				   href="#!"
+				   role="button"
+				   ><i class="fab fa-instagram"></i
+				  ></a>
+			  </div>
+			</div>
+		  </section>
+		</div>
+		<div
+			 class="text-center p-3"
+			 style="background-color: rgba(0, 0, 0, 0.2)"
+			 >
+		  © 2023 Copyright:
+		  <a class="text-white" href="#"
+			 >Nonthaphat Sapkhong</a
+			>
+		</div>
+	  </footer>
+</body>
+</html>

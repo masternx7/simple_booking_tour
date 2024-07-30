@@ -1,0 +1,84 @@
+@charset "UTF-8";
+
+body {
+	font-family: 'Noto Sans Thai', sans-serif;
+}
+
+.px-lg-5 {
+    padding-right: 3rem;
+    padding-left: 3rem;
+  }
+
+.px-4 {
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.project-text {
+  padding: 3rem;
+  font-size: 90%;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.li1 img {
+  position: absolute;
+}
+
+.container2 {
+  background-image: url("../images/about-bg.png");
+}
+
+.package-item {
+  transition: .5s;
+}
+
+.package-item:hover {
+  box-shadow: 0 0 30px #CCCCCC;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
+.text-decoration-none {
+  text-decoration: none;
+}
+
+.p-4 {
+  padding: 1.5rem;
+}
+
+.m-0 {
+  margin: 0;
+}
+
+.photo-center {
+	text-align: center;
+}
+
+.main-posts {
+  position: relative;
+  z-index: 6;
+}
+
+#btnBackToTop {
+	position: fixed;
+	bottom: 40px;
+	right: 40px;
+	font-size: 22px;
+	width: 50px;
+	height: 50px;
+	border-radius: 50px;
+	border: none;
+	background-color: salmon;
+	color: white;
+	cursor: pointer;
+	display: none;
+}

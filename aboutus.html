@@ -1,0 +1,276 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Fluffy Travel</title>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js" integrity="sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i" crossorigin="anonymous"></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+	<link href="css/mystylecss.css" rel="stylesheet"/>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai&display=swap" rel="stylesheet">
+	<script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(window).scroll(function(){
+				if($(this).scrollTop() > 40) {
+					$('#btnBackToTop').fadeIn();
+				} else {
+					$('#btnBackToTop').fadeOut();
+				}
+			});
+			
+			$("#btnBackToTop").click(function(){
+				$('html ,body').animate({scrollTop : 0},100);
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg bg-white sticky-top navbar-light p-3 shadow-sm">
+	  <div class="container-fluid">
+		<a class="navbar-brand" href="index.html"><i class="me-2"></i> <img src="images/logo.png" width="25%"></a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+		  <span class="navbar-toggler-icon"></span>
+		</button>
+		<div class=" collapse navbar-collapse" id="navbarNavDropdown">
+		  <div class="ms-auto d-none d-lg-block">
+		  </div>
+		  <ul class="navbar-nav ms-auto ">
+			<li class="nav-item">
+			  <a class="nav-link mx-2 text-uppercase " aria-current="page" href="index.html">หน้าแรก</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link mx-2 text-uppercase" href="tourabroad.html">ทัวร์ต่างประเทศ</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link mx-2 text-uppercase" href="tourthailand.html">ทัวร์ในประเทศ</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link mx-2 text-uppercase" href="article.html">บทความท่องเที่ยว</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link mx-2 text-uppercase active" href="#">เกี่ยวกับเรา</a>
+			</li>
+			<li class="nav-item">
+			  <a class="mx-3 btn btn-danger" data-bs-toggle="modal" data-bs-target="#loginModal">เข้าสู่ระบบ</a>
+			</li>
+		  </ul>
+		</div>
+	  </div>
+	</nav>
+	<div class="container-fluid px-0" style="width: 100%">
+		<div class="row">
+			<div class="col">
+				<div id="carouselExampleCaptions" class="carousel slide">
+				  <div class="carousel-indicators">
+					<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+					<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+					<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+				  </div>
+				  <div class="carousel-inner">
+					<div class="carousel-item active">
+					  <img src="images/sl1.png" class="d-block w-100" alt="...">
+					  <div class="carousel-caption d-none d-md-block">
+						<h5>ไปทัวร์ญี่ปุ่น</h5>
+						<p>ชมต้นซากุระสวยๆ งดงามได้เลย</p>
+					  </div>
+					</div>
+					<div class="carousel-item">
+					  <img src="images/sl2.png" class="d-block w-100" alt="...">
+					  <div class="carousel-caption d-none d-md-block">
+						<h5>5 ช้อปปิ้งลิสต์</h5>
+						<p>ของฝากจากเวียดนาม ที่ต้องซื้อกลับบ้าน</p>
+					  </div>
+					</div>
+					<div class="carousel-item">
+					  <img src="images/sl3.png" class="d-block w-100" alt="...">
+					  <div class="carousel-caption d-none d-md-block">
+						<h5>ทัวร์ฮ่องกง</h5>
+						<p>ไหว้พระเสริมความปัง ทริปนี้สายมูไม่ควรพลาด</p>
+					  </div>
+					</div>
+				  </div>
+				  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Previous</span>
+				  </button>
+				  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Next</span>
+				  </button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<br>
+	<section class="text-center container">
+		<div class="row py-lg-5">
+		  <div class="col-lg-6 col-md-8 mx-auto">
+			<h1 class="fw-light">เกี่ยวกับเรา</h1>
+			<p class="lead text-body-secondary">บริษัทเราเป็นบริษัทขายโปรโมชั่นท่องเที่ยว เริ่มต้นที่เป็นคนชอบไปเที่ยวไม่ว่าจะในประเทศหรือต่างประเทศ จนเราสามารถก่อตั้งบริษัท Fluffy Travel นับเป็นความประสบความสำเร็จเป็นอย่างยิ่ง ลูกค้าทุกท่านโปรดจงไว้ใจเรา ขอบคุณทุกท่านที่ใช้บริการกับทางเรา</p>
+			<p>
+			  <a href="#" class="btn btn-primary my-2">ติดต่อเรา</a>
+			  <a href="#" class="btn btn-secondary my-2">ใบอนุญาตประกอบธุรกิจ</a>
+			</p>
+		  </div>
+		</div>
+	  </section>
+	  <hr>
+	  <section class="text-center container">
+		<div class="row py-lg-5">
+		  <div class="col-lg-6 col-md-8 mx-auto">
+			<h3 class="fw-light">บริษัทของเราเรามุ่งเน้นการให้บริการ ดังนี้</h3><br>
+			<p class="h5">1. Package Tour</p>
+			<p class="">บริษัทของเราจำหน่ายแพกเกจทัวร์ทั่วโลกในราคาที่ดีที่สุด ไม่ว่าในรูปแบบของ ทัวร์ราคาประหยัด Super Save หรือ ทัวร์หรูหราระดับ 5 ดาว Super Luxury ทุกทวีปทั่วโลก มีโปรแกรมการเดินทางให้ท่านลูกค้าเลือกมากกว่า 1,000 โปรแกรม นอกจากนี้เรายังให้ข้อมูลการ เดินทางที่จำเป็นแก่ลูกค้าของเรา ในการท่องเที่ยวเมืองใหญ่ด้วยตัวเอง</p>
+			<p class="h5">2. Incentive/Private Group</p>
+			<p class="">เราสามารถจัดกรุ๊ปทัวร์ในรูปแบบและงบประมาณ ตามที่ลูกค้าต้องการ ไม่ว่าจะเป็นกรุ๊ปไซส์เล็ก (2-10 ท่าน) เช่น ครอบครัว, กลุ่มเพื่อน หรือ กรุ๊ปไซส์ใหญ่ (35-1,000 ท่าน) สำหรับบริษัทใหญ่ ๆ ชั้นนำของประเทศ หรือ พาไปดูงาน จัดสัมมนา เราสามารถสร้างสรรค์ให้ลูกค้า ได้ทุกรูปแบบความต้องการและเป็นไปตามงบประมาณที่ลูกค้ากำหนด นี่คือจุดแข็งสำคัญ และเป็น เหตุผลที่ทำให้เราประสบความสำเร็จ</p>
+			<p class="h5">3. Full Service</p>
+			<p class="">สำหรับโปรแกรมทัวร์ที่เราจัด นอกจากสถานที่ท่องเที่ยวแล้ว เรายังให้ความสำคัญ กับไกด์หัวหน้าทัวร์ (Tour Leader) ซึ่งเป็นหัวใจสำคัญของการท่องเที่ยวแบบทัวร์ เราจึงพยายามคัด เลือกบุคลากรที่มีคุณภาพและมีประสบการณ์สูงเท่านั้น</p>
+			<p class="h5">4. ประกันการเดินทาง</p>
+			<p class="">เรามีบริการในการเลือกซื้อประกันภัยการเดินทางสำหรับลูกค้าของเราในอัตรา ที่เหมาะสม โดยเริ่มต้นที่ 25 บาทต่อคน สำหรับความคุ้มครอง 1,000,000 บาทไทย</p>
+			</div>
+		</div>
+	  </section>
+	  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="opacity: 97%">
+		<div class="modal-dialog">
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <h1 class="modal-title fs-5" id="exampleModalLabel">ระบบสมาชิก | Member</h1>
+			  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+			  <div class="mb-3">
+				<label for="exampleFormControlInput1" class="form-label">Email address</label>
+				  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+			  </div>
+			  <div class="mb-3">
+				<label for="inputPassword5" class="form-label">Password</label>
+				  <input type="password" id="inputPassword5" class="form-control" aria-labelledby="passwordHelpBlock">
+				  <div id="passwordHelpBlock" class="form-text">
+					Your password must be 8-20 characters long.
+				  </div>
+			  </div>
+			</div>
+			<div class="modal-footer">
+			  <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginSuccess">เข้าสู่ระบบ</a>
+			  <a href="register.html" class="btn btn-primary">สมัครสมาชิก</a>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	  <button id="btnBackToTop"><i class="fas fa-arrow-up"></i></button>
+	  <div class="modal fade" id="loginSuccess" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true" style="opacity: 97%">
+		<div class="modal-dialog">
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <h1 class="modal-title fs-5" id="exampleModalLabel2">ระบบสมาชิก | Member</h1>
+			  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+			  <div class="alert alert-success" role="alert">
+				<h4 class="alert-heading">เข้าสู่ระบบเรียบร้อยแล้ว</h4>
+				<p>คุณสามารถดู Packet ท่องเที่ยวและดูรายละเอียดต่างๆได้ </p>
+				<p>ถ้าหากว่าคุณชอบ Packet ไหน สามารถกดจองได้ทันที</p>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	  <div class="modal fade" id="regisSuccess" tabindex="-1" aria-labelledby="exampleModalLabel3" aria-hidden="true" style="opacity: 97%; padding-top: 120px">
+		<div class="modal-dialog">
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <h1 class="modal-title fs-5" id="exampleModalLabel3">สมัครสมาชิก | Register</h1>
+			  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+			  <div class="alert alert-success" role="alert" style="text-align: center">
+				  <svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+					<path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+				  </svg><br><br>
+				<h4 class="alert-heading">สมัครสมาชิกเรียบร้อยแล้ว</h4>
+			  </div>
+			</div>
+			<div class="modal-footer">
+			  <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">เข้าสู่ระบบ</a>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	<footer class="text-center text-lg-start text-white" style="background-color: #929fba">
+		<div class="container p-4 pb-0">
+		  <section class="">
+			<div class="row">
+			  <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+				<h6 class="text-uppercase mb-4 font-weight-bold">
+				  fluffy travel
+				</h6>
+				<p>
+				  เปิดประสบการณ์ใหม่ๆ ของคุณกับที่ <br>Fluffy Travel ได้เลย สถานที่ท่องเที่ยวมีมากมาย
+				  ให้คุณได้สัมผัสประสบการณ์ <br>การท่องเที่ยวของคุณ
+				</p>
+			  </div>
+			  <hr class="w-100 clearfix d-md-none" />
+			  <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+				<h6 class="text-uppercase mb-4 font-weight-bold">แพ็คเกจ</h6>
+				<p>
+				  <a class="text-white" href="tourabroad.html">ทัวร์ต่างประเทศ</a>
+				</p>
+				<p>
+				  <a class="text-white" href="tourthailand.html">ทัวร์ในประเทศ</a>
+				</p>
+			  </div>
+			  <hr class="w-100 clearfix d-md-none" />
+			  <hr class="w-100 clearfix d-md-none" />
+
+			  <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+				<h6 class="text-uppercase mb-4 font-weight-bold">ติดต่อ</h6>
+				<p><i class="fas fa-home mr-3"></i> Pathum Thani, Rangsit</p>
+				<p><i class="fas fa-envelope mr-3"></i> nonthaphat@bumail.net</p>
+				<p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+				<p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+			  </div>
+			  <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+				<h6 class="text-uppercase mb-4 font-weight-bold">ติดตามเราได้ที่</h6>
+
+				<a
+				   class="btn btn-primary btn-floating m-1"
+				   style="background-color: #3b5998"
+				   href="#!"
+				   role="button"
+				   ><i class="fab fa-facebook"></i
+				  ></a>
+				<a
+				   class="btn btn-primary btn-floating m-1"
+				   style="background-color: #55acee"
+				   href="#!"
+				   role="button"
+				   ><i class="fab fa-twitter"></i
+				  ></a>
+				<a
+				   class="btn btn-primary btn-floating m-1"
+				   style="background-color: #ac2bac"
+				   href="#!"
+				   role="button"
+				   ><i class="fab fa-instagram"></i
+				  ></a>
+			  </div>
+			</div>
+		  </section>
+		</div>
+		<div
+			 class="text-center p-3"
+			 style="background-color: rgba(0, 0, 0, 0.2)"
+			 >
+		  © 2023 Copyright:
+		  <a class="text-white" href="#"
+			 >Nonthaphat Sapkhong</a
+			>
+		</div>
+	  </footer>
+</body>
+</html>
